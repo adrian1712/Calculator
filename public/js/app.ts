@@ -25,12 +25,14 @@ namespace app {
           controller: App.ContactController,
         })
         ;
-        $stateProvider
-          .state ('calculator', {
-            url: '/calculator',
-            template: 'Calculator page',
-            controller: App.ContactController,
+      $stateProvider
+        .state ('calculator', {
+          url: '/calculator',
+          templateUrl: 'templates/calculator.html',
+          controller: App.CalculatorController,
+          controllerAs: 'calculatorController'
           })
+        ;
     }
   ]);
 }
