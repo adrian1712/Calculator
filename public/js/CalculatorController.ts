@@ -82,26 +82,23 @@ namespace App {
         else if (this.operation == "-") {
           this.answer = this.num1 - this.num2;
         }
-        else if(this.operation = "*") {
+        else if(this.operation == "*") {
           this.answer = this.num1 * this.num2;
         }
-        else if(this.operation = "/") {
+        else if(this.operation == "/" && this.num2 == "0") {
+            this.answer ="Cannot divide by zero"
+        }
+        else if(this.operation == "/") {
           this.answer = this.num1 / this.num2;
         }
         this.display = this.num1 + this.operation + this.num2 + " = " + this.answer
       }
       public useOperationOfClear() {
-        this.display = ""
+        this.display = "",
+        this.num1 = "",
+        this.num2 = "",
+        this .operation = ""
       }
 
   }
 }
-// public setNumber(numValue) {
-//   if (this.num1 == ""){
-//     this.num1 = numValue;
-//   }
-//   else {
-//     this.num2 = numValue;
-//   }
-//   this.display = this.num1 + this.operation + this.num2
-// }
